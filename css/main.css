@@ -8132,6 +8132,10 @@ nav li:hover, a:focus {
   /* padding-top: 100px; */
   /* position: relative; */ }
 
+.titulosScroll {
+  min-height: 65vh;
+  background-color: #b1b2b6; }
+
 .titulosScroll h2, .titulosScroll .h2 {
   color: white;
   font-size: 40px;
