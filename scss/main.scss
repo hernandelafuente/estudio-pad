@@ -1,5 +1,6 @@
 // @import "bootstrap.scss";
 // @import "carousel.scss";
+@import "colores.scss";
 
 
 html, body {
@@ -13,12 +14,12 @@ html, body {
         text-decoration: none;
     }
 
-    #containerPrincipal {
-        background-color: black;
-        /* /* min-width: 100vw; */
-        min-height: 100vh;
-        /* position: relative; */
-    }
+    // #containerPrincipal {
+    //     background-color: $color-black;
+    //     /* /* min-width: 100vw; */
+    //     min-height: 100vh;
+    //     /* position: relative; */
+    // }
 
 header {
     width: 100%;
@@ -31,8 +32,9 @@ header {
     padding-left: 120px;
     padding-right: 120px;
     padding-top: 10px;
-    background-color: black;
+    background-color: $color-black;
     z-index: 1;
+    border-bottom: 1px solid $color-darkgray;
 }
 
 
@@ -45,6 +47,7 @@ header {
         align-items:flex-start;
         padding-left: 20px;
         padding-right: 20px;
+        border-bottom: 1px solid $color-darkgray;
     }
 }
 
@@ -67,6 +70,7 @@ nav ul {
         gap: 10px;
         font-size: 15px;
         padding-bottom: 10px;
+        gap: 5px;
     }
 }
 
@@ -75,12 +79,12 @@ nav ul {
 }
 
 #logo-nav a {
-    color: #b1b2b6;
+    color: $color-gray;
 }
 
 
 #logo-nav a:hover {
-    color: tomato;
+    color: $color-naranja;
 }
 
 /* #logo-nav:hover {
@@ -89,16 +93,16 @@ nav ul {
 
 
 nav li a {
-    color:#b1b2b6;
+    color:$color-gray;
 }
 
 nav li a:hover {
-    color: #b1b2b6;
+    color: $color-gray;
 }
 
 nav li{
 text-decoration: none;
-background-image: linear-gradient(#b1b2b6, #b1b2b6);
+background-image: linear-gradient($color-gray, $color-gray);
 background-position: 0% 100%;
 background-repeat: no-repeat;
 background-size: 0% 2px;
@@ -116,13 +120,17 @@ nav li:hover, a:focus {
     /* transform: scale(1.1); */
 }
 
-#inicio {
-    padding: 200px 360px;
+
+main#containerPrincipal {
+    background-color: $color-black;
+    min-height: 95vh;
+    padding: 200px 360px 80px 360px;
+    border-bottom: 1px solid $color-gray;
 }
 
 @media (max-width: 768px) {
-    #inicio {
-        padding: 180px 20px 70px 20px;
+    main#containerPrincipal {
+        padding: 0px 20px 20px 20px;
     }
 }
 
@@ -130,19 +138,19 @@ nav li:hover, a:focus {
     font-family: 'EB Garamond', serif;
     font-size: 10em;
     line-height: 1em;
-    color:white;
+    color:$color-white;
     margin: 0px;
 }
 
 #parrafoHome {
     font-family: 'EB Garamond', serif;
     font-size: 2em;
-    color:white;
+    color:$color-white;
     padding-top: 40px;
 }
 
 #parrafoHome strong {
-    color:tomato;
+    color:$color-naranja;
 }
 
 /* Media query para el lema mobile */
@@ -150,16 +158,24 @@ nav li:hover, a:focus {
     #tituloHome {
         font-size: 4em;
         line-height: 1em;
-        padding-top: 80px;
+        padding-top: 220px;
     }
     #parrafoHome {
-        font-size: 1 em;
-        line-height: 1.4em;
+        padding-top: 20px;
+        font-size: 24px;
+        line-height: 1.5em;
     }
 }
 
+.nosotros {
+    font-family: 'EB Garamond', serif;
+    font-size: 2em;
+    color:$color-darkgray;
+    padding: 240px 360px 40px 360px;
+}
+
 .tituloSeccion{
-    color: white;
+    color: $color-white;
     position: absolute;
     top: 25%;
     left: 25%;
@@ -167,70 +183,61 @@ nav li:hover, a:focus {
 
 #containerWorks{
     z-index: 2;
-    /* margin-left: 120px;
-    margin-right: 120px; */
-    background-color: #cf553d;
-    /* min-width: 100vw;
-    min-height: 100vh; */
+    background-color: $color-naranja;
+    
 }
 
 
 #containerServicios{
-    background-color: #232323;
+    background-color: $color-white;
     min-width: 100vw;
-    min-height: 100vh;
-    /* padding-top: 100px; */
-    /* position: relative; */
 }
 
-.titulosScroll {
-    min-height: 65vh;
-    background-color: #b1b2b6;
-}
 
-.titulosScroll h2{
-    color:white;
-    font-size: 40px;
+
+
+h3 {
+    color:$color-black;
+    background-color: $color-white;
+    font-family: sans-serif;
+    font-size: 30px;
     margin: 0px;
-    padding-top: 80px;
-    padding-left: 120px;
-    /* position: absolute;
-    top: 80px;
-    left: 25%;
-    right: 25%; */
+    padding: 120px 120px 0px 120px;
 }
 
 .galeriaServicios {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 40px;
-    padding: 120px;
-    /* margin-top: 60px;
-    margin-left: 25%;
-    margin-right: 25%; */
+    gap: 60px;
+    padding: 40px 25% 120px 120px;
 }
 
 .servicios {
-    border-width: 4px;
-    border-color: #2d2d2d;
     border-style: solid;
-    padding: 2px 10px 2px 10px;
+    border-top: 1px solid $color-darkgray;
+    border-right: 0px;   
+    border-bottom: 0px;
+    border-left: 0px;
+    color:$color-gray;
+    padding: 2px 0px 0px 0px;
 }
 
-.servicios h3 {
-    font-size: 30px;
-    color:#cf553d;
+.servicios h5 {
+    font-family: sans-serif;
+    font-size: 20px;
+    color:$color-darkgray;
     margin: 0px;
-    padding: 8px 4px;
+    padding: 8px 0px 0px 0px;
 }
 
 .servicios p {
-    font-size: 24px;
-    line-height: 30px;
-    color: white;
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: $color-darkgray;
     margin: 0px;
-    padding: 0px 4px 12px 4px;
+    padding: 10px 0px 0px 0px;
 }
 
 /* Media query para servicios mobile */
@@ -238,31 +245,71 @@ nav li:hover, a:focus {
     .galeriaServicios {
         display: flex;
         flex-direction: column;
-        padding-top: 0px;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding: 0px 20px 40px 20px;
         font-size: 5em;
-        /* line-height: 1em; */
-        gap: 20px;
+        gap: 40px;
     }
+
+    .nosotros {
+        font-size: 22px;
+        line-height: 60px;
+        color: $color-white;
+        background-color: $color-black;
+        padding: 320px 20px 30px 20px;
+        // border-bottom: 25px solid $color-gray;
+    }
+
     .servicios {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
         font-size: 1.2 em;
-        border-style: none;
+        border-top: 1px solid $color-darkgray;
         padding: 0px;
     }
 
-    .titulosScroll h2 {
-        padding: 80px 20px 30px 20px;
-        /* height: 20px; */
+    h3 {
+        font-size: 30px;
+        text-align: center;
+        padding: 240px 20px 40px 20px;
+    }
+
+    .servicios h5 {
+        padding-top: 12px;
     }
 }
 
+    .containerArchivo {
+        // min-width: 100vh;
+        // min-height: 10vh;
+        display: grid;
+        grid-template-columns: 4fr 4fr 4fr;
+        margin: 80px 360px 50px 360px; 
+        border-bottom: 1px solid $color-darkgray;
+    }
+
+    .containerArchivo .card {
+        border: 0px;
+        max-width: 100%;
+        // justify-content: flex-start;      
+    }
+
+    // .containerArchivo .card img {
+    //     width: auto;
+    //     height: auto;
+    // }
+
+    .containerArchivo .card p {
+        font-family: sans-serif;
+        font-size: 14px;
+        color: $color-darkgray;
+        padding: 40% 50% 50% 0%;   
+    }
 
 
 #containerMetodo{
-    background-color: #cf553d;
+    background-color: $color-naranja;
     min-width: 100vw;
     min-height: 100vh;
     /* padding-top: 100px; */
@@ -271,12 +318,12 @@ nav li:hover, a:focus {
 
 .nuestroMetodo ol {
     font-size: 25px;
-    color: white;    
+    color: $color-white;    
 }
 
 .nuestroMetodo p {
     font-size: 25px;
-    color: white;
+    color: $color-white;
     padding-left: 120px;
     padding-right: 120px;
    }
@@ -302,22 +349,25 @@ nav li:hover, a:focus {
     }
 
     footer{
-        background-color: black;
-        min-height: 50%;
+        background-color: $color-black;
+        min-height: 25vh;
     }
 
     footer h4 {
-        color: white;
+        color: $color-white;
         font-family: sans-serif;
         text-align: center;
-        font-size: 35px;
-        padding: 180px 120px 20px 120px
+        margin: 0px;
+        font-size: 32px;
+        padding: 100px 120px 30px 120px
     }
 
     footer ul {
         display: flex;
         justify-content:center;
         list-style: none;
+        margin: 0px;
+        padding: 0px;
     }
 
     footer ul li {
@@ -334,30 +384,37 @@ nav li:hover, a:focus {
     }
 
     footer ul li a {
-        color: #b1b2b6;
+        color: $color-gray;
         text-decoration: none;
     }
 
     footer ul li a:hover {
-        color: #b1b2b6;
+        color: $color-gray;
     }
 
       /* Media query para footer */
 @media (max-width: 768px) {
 
-    footer ul {
+    footer {
+        min-height: 25vh;
+        margin-bottom: 20px;
+        }
+
+        footer h4 {
+        font-size: 25px;
+        padding: 40px 20px 20px 20px;
+        }
+
+        footer ul {
         flex-direction: column;
         align-items: center;
         gap: 14px;
         font-size: 20px;
-        padding: 0px;
-        margin-bottom: 10px;
+        padding-bottom: 30px;
+        gap: 4px;
         }
 
-        footer h4 {
-            font-size: 30px;
-            padding: 70px 20px 30px 20px;
-        }
+        
     }
    
 
@@ -367,7 +424,7 @@ nav li:hover, a:focus {
     bottom: 25%;
     left: 25%;
     right: 25%;
-    background-color: white;
+    background-color: $color-white;
 
    }
 
@@ -398,8 +455,15 @@ form {
 
 
 #contact{
-     /* /* min-width: 100vw; */
-     min-height: 100vh;
+   padding: 80px 50% 40px 120px;
+   min-height: 100vh;
+}
+
+/* Media query para formulario de contacto */
+@media (max-width: 768px) {
+#contact{
+    padding: 20px 20px 30px 20px;
+}
 }
 
 
