@@ -9,7 +9,6 @@ a {
 
 header {
   width: 100%;
-  /* min-width: 100%: */
   position: fixed;
   display: flex;
   flex-direction: row;
@@ -25,7 +24,6 @@ header {
 /* Media query para el header mobile */
 @media (max-width: 768px) {
   header {
-    /* width: 91%; */
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
@@ -63,9 +61,6 @@ nav ul {
 #logo-nav a:hover {
   color: tomato; }
 
-/* #logo-nav:hover {
-    transform: scale(1.05);
-} */
 nav li a {
   color: #b1b2b6; }
 
@@ -78,15 +73,13 @@ nav li {
   background-position: 0% 100%;
   background-repeat: no-repeat;
   background-size: 0% 2px;
-  /* transition: background-size .3s; */
   transition: all 0.3s; }
 
 nav li:hover {
   transform: scale(1.1); }
 
 nav li:hover, a:focus {
-  background-size: 100% 2px;
-  /* transform: scale(1.1); */ }
+  background-size: 100% 2px; }
 
 main#containerPrincipal {
   background-color: black;
@@ -213,7 +206,6 @@ h3 {
   .servicios h5 {
     padding-top: 12px; } }
 
-/* css page archivo */
 .containerArchivo {
   display: grid;
   grid-template-columns: 4fr 4fr 4fr;
@@ -242,9 +234,7 @@ h3 {
 #containerMetodo {
   background-color: tomato;
   min-width: 100vw;
-  min-height: 100vh;
-  /* padding-top: 100px; */
-  /* position: relative; */ }
+  min-height: 100vh; }
 
 .nuestroMetodo ol {
   font-size: 25px;
@@ -336,8 +326,7 @@ form {
   display: grid;
   grid-template-areas: "nombre nombre nombre nombre" "telefono correo correo turno";
   grid-template-columns: repeat(4 fr);
-  grid-template-rows: 10px 10px;
-  /* justify-content: center; */ }
+  grid-template-rows: 10px 10px; }
 
 .nombre {
   grid-area: nombre; }
