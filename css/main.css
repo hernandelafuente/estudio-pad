@@ -213,6 +213,7 @@ h3 {
   .servicios h5 {
     padding-top: 12px; } }
 
+/* css page archivo */
 .containerArchivo {
   display: grid;
   grid-template-columns: 4fr 4fr 4fr;
@@ -220,14 +221,23 @@ h3 {
   border-bottom: 1px solid #87888a; }
 
 .containerArchivo .card {
-  border: 0px;
-  max-width: 100%; }
+  border: 0px; }
 
 .containerArchivo .card p {
   font-family: sans-serif;
   font-size: 14px;
   color: #87888a;
   padding: 40% 50% 50% 0%; }
+
+/* Media query para page archivo */
+@media (max-width: 768px) {
+  .containerArchivo {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 20px 0px 20px;
+    gap: 40px;
+    padding: 20px 0px 40px 0px;
+    font-size: 5em; } }
 
 #containerMetodo {
   background-color: tomato;
